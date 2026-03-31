@@ -1,0 +1,51 @@
+caisse-4182-4223/
+│
+├── public/                          # Dossier accessible via navigateur
+│   ├── index.php                    # Point d'entrée (routeur principal)
+│   ├── .htaccess                    # Réécriture d'URL (Apache)
+│   │
+│   └── assets/
+│       ├── css/
+│       │   ├── bootstrap.min.css    # Bootstrap CDN ou fichier local
+│       │   └── style.css            # Vos styles personnalisés (flexbox/grid)
+│       │
+│       ├── js/
+│       │   ├── bootstrap.bundle.min.js
+│       │   └── app.js               # Vos scripts (calculs dynamiques)
+│       │
+│       └── images/                  # Images éventuelles
+│
+├── app/                             # Code applicatif (non accessible directement)
+│   ├── controllers/
+│   │   ├── AchatController.php
+│   │   ├── CaisseController.php
+│   │   ├── ProduitController.php
+│   │   └── StatistiqueController.php
+│   │
+│   ├── models/
+│   │   ├── Achat.php
+│   │   ├── Caisse.php
+│   │   ├── LigneAchat.php
+│   │   └── Produit.php
+│   │
+│   ├── views/
+│   │   ├── templates/
+│   │   │   ├── header.php           # <head> + début body + navbar
+│   │   │   └── footer.php           # fermeture body + scripts
+│   │   │
+│   │   ├── login.php                # Écran de connexion
+│   │   ├── choix_caisse.php         # Choix de la caisse
+│   │   ├── saisie_achat.php         # Saisie des achats
+│   │   └── statistiques.php         # Ventes totales / par article / par jour
+│   │
+│   └── config/
+│       └── database.php             # Connexion MySQL (PDO)
+│
+├── vendor/                          # Composer (Flight PHP)
+│
+├── sql/
+│   └── database.sql                 # Script création tables + insertions
+│
+├── .htaccess                        # Redirection vers public/
+├── composer.json                    # Dépendances PHP
+└── README.md                        # Documentation rapide
